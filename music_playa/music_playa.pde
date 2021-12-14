@@ -1,9 +1,12 @@
-//Gloal variar; 
+//Global Variables
 
-void setup() {}//End setup()
+void setup() {
+  size(500, 600); //fullScreen(), displayWidth, displayHeight
+  population();
+}//End setup()
 
 void draw() {}//End draw()
 
 void keyPressed() {}//End keyPressed()
 
-void mousePressed() {}//End mousePressed()
+void mousePressed() {}//End mousepressed()
