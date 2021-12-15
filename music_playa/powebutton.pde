@@ -1,9 +1,14 @@
 //global Variables
 color purple=#FF03F3, yellow=#FFF703, resetWhite=#FFFFFF, buttonColour;
+float powerButtonX, powerButtonY, powerButtonWidth, powerButtonHeight;
 //
 void powerButton() {
   //Population
-  rect(width*29/32, height*0/16, width*3/32, height*1/16);
+  powerButtonX = width*29/32;
+  powerButtonY = height*0/16;
+  powerButtonWidth = width*3/32;
+  powerButtonHeight = height*1/16;
+  rect(powerButtonX, powerButtonY, powerButtonWidth, powerButtonHeight);
 }//End powerButton()
 //
 void powerButtonDraw() {
@@ -11,4 +16,6 @@ void powerButtonDraw() {
   //Text
 }//End powerButtonDraw()
 //
-void powerButtonMousePressed() {}//powerButtonMousePressed()
+void powerButtonMousePressed() {
+  if (mouseX> && mouseX< && mouseY> && mouseY< ) exit();
+}//powerButtonMousePressed()
