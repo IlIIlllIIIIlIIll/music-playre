@@ -19,7 +19,7 @@ void setup() {
   textSetup();
   
   minim = new Minim(this);
-  song1 = minim.loadFile("Glizzy Glizzy Glizzy on my mind.mp3"); 
+  song1 = minim.loadFile("Y2Mate (mp3cut.net).mp3"); 
   song1.play(1);
   
 }//End setup()
