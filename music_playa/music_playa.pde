@@ -50,8 +50,15 @@ void keyPressed() {
   if (key == 'a') song1.skip(1000);;
   
   if (key == 'd') song1.skip(-1000);;
+ 
+ if (key == 'm') { 
+    if ( song1.isMuted() ) {
+      song1.unmute();
+    } else {
+      song1.mute();
+    }
 }//End keyPressed()
 
-void mousePressed() {
+//void mousePressed() {
   powerButtonMousePressed();
 }//End mousepressed()
