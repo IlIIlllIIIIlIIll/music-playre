@@ -29,11 +29,10 @@ void keyPressed() {
   if (key == 'w') {
     if ( song1.isPlaying() ) {
       song1.pause();
-    } else if ( song1.position() >= song1.length() ) {
+    } else if ( song1.position() >= song1.length()-3000 ) {
       song1.pause();
       song1.rewind();
-    }
-    else {
+    } else {
       song1.play();
     }
   }
@@ -46,19 +45,23 @@ void keyPressed() {
       song1.rewind();
     }
   }
-  //fastforad
-  if (key == 'a') song1.skip(1000);;
-  
-  if (key == 'd') song1.skip(-1000);;
- 
- if (key == 'm') { 
+  //Fast Forward
+  if (key == 'a') song1.skip(1000);
+  //Fast Rewind
+  if (key == 'd') song1.skip(-1000);
+  //Mute
+  if (key == 'm') { 
     if ( song1.isMuted() ) {
       song1.unmute();
     } else {
       song1.mute();
     }
+  }
+  //Loop Function
+  int loopIntNum = 20; //Loop Hardcode
+  if ( key == 'l' || key == 'L' ) song1.loop(loopIntNum); //Play Button
 }//End keyPressed()
 
-//void mousePressed() {
+void mousePressed() {
   powerButtonMousePressed();
 }//End mousepressed()
