@@ -8,7 +8,9 @@ import ddf.minim.ugens.*;
 
 //Global Variables
 Minim minim; //creates object to access all functions
-AudioPlayer song1; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+int numberOfSongs = 1;
+AudioPlayer [] song = new AudioPlayer[numberOfSongs]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+int currentSong = numberOfSongs - numberOfSongs ;
 
 void setup() {
   size(500, 600); //fullScreen(), displayWidth, displayHeight
@@ -16,7 +18,8 @@ void setup() {
   textSetup();
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
-  song1 = minim.loadFile("Y2Mate (mp3cut.net).mp3"); //able to pass absolute path, file name, and URL
+  song[currentSong] = minim.loadFile("Y2Mate (mp3cut.net).mp3");//able to pass absolute path, file name, and URL
+  song[currentSong+1] = minim.loadFile("earl_sweatshirt_east_extended_instrumental_-2550735060943346255.mp3");
   //song1.play(); //Parameter is milli-seconds from start of audio file to start playing
 }//End setup()
 
