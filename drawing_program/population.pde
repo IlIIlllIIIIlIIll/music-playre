@@ -6,8 +6,8 @@
 void population() {
   drawingSurfaceX = width*0;
   drawingSurfaceY = height*0;
-  drawingSurfaceWidth = width*3/4;
-  drawingSurfaceHeight = height*4/5;
+  drawingSurfaceWidth = width*4/5;
+  drawingSurfaceHeight = height*5/5;
   //
   drawingDiameter = width*1/100; //Needed for ellipses
 }//End population()

@@ -16,7 +16,7 @@ void textSetup() {
    String[] fontList = PFont.list(); //To list all fonts available on system
    printArray(fontList); //For listing all possible fonts to choose, then createFont
    */
-  font = createFont ("Harrington", 55); //Verify font exists
+  font = createFont ("Times New Roman", 55); //Verify font exists
   //Tools / Create Font / Find Font / Do Not Press "OK", known bug
   //Layout with a rect(); Variables copied to text();
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
@@ -24,7 +24,7 @@ void textSetup() {
 
 //Code to be repeated instead of copied and pasted
 void textCode(String string, int size, float rectX, float rectY, float rectWidth, float rectHeight) {
-  fill(black); //Ink, hexidecimal copied from Color Selector
+  fill(white); //Ink, hexidecimal copied from Color Selector
   textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   textFont(font, size); //Change the number until it fits, largest font size
