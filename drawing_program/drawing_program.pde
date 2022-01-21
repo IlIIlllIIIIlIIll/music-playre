@@ -1,7 +1,7 @@
 //Global Variables
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
 Boolean draw=false;
-
+color black1=#000000;
 void setup() {
   size (500, 600); //fullScreen(), dispayWidth, displayHeight
   population();
@@ -16,6 +16,7 @@ void draw() {
   if ( draw == true && mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight)
   {
     ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter); //This code-line is for line vs. circle
+    fill(black1);
   }//End line draw
 }//End draw()
 
